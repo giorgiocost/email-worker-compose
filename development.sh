@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ $* == 'r' ]; then
+    docker-compose down
+    docker-compose up 
+    exit 1
+fi
+
 if [ $* == 'up' ]; then
     docker-compose up -d
     exit 1
